@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Deku Sticks",
+      "initialState": "0",
+      "maxState": "3"
+    }
+    //TODO: Meer.
+  ]
+}
