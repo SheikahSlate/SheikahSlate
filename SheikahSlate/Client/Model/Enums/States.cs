@@ -11,24 +11,29 @@ namespace SheikahSlate.Client.Model.Enums
         public class OneState
         {
             public static readonly byte Unobtained = 0;
+            public static readonly byte Max { get; } = 0
         }
 
         public class TwoState : OneState
         {
             public static readonly byte Obtained = 1;
+            public static readonly byte Max { get; } = 1
         }
 
         public class ThreeState : TwoState
         {
             public static readonly byte FirstUpgrade = 2;
+            public static readonly byte Max { get; } = 2
         }
         public class FourState : ThreeState
         {
             public static readonly byte SecondUpgrade = 3;
+            public static readonly byte Max { get; } = 3
         }
         public class FiveState : FourState
         {
             public static readonly byte ThirdUpgrade = 4;
+            public static readonly byte Max { get; } = 4
         }
 
         public class Sticks : FourState { }
