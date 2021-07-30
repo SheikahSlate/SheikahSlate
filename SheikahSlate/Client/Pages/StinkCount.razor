@@ -1,19 +1,17 @@
 ﻿@page "/stinkCount"
 
 <h1>TEL AF NAAR DIKKESTINKBEER!!!</h1>
-@foreach (var item in items) {
-    <img src="Images/@item.Src" @onmouseup="item.clickAction" oncontextmenu="return false;" width="300px" />
-}
+<img src="Images/@Item.Src" @onmouseup="Item.ClickAction" oncontextmenu="return false;" width="300px" />
 
 @code {
-    List<Image> items = Enumerable.Range(1, 1).Select(i => new Image { FileName = 10}).ToList();
+    public Image Item = new() { FileName = 10 };
 
     public class Image
     {
-        public int FileName {get;set;}
+        public int FileName { get; set; }
         public string Src => $"{FileName}.jpg";
 
-        public void clickAction(MouseEventArgs args) {
+        public void ClickAction(MouseEventArgs args) {
             if (args.Button == 0) {
                 if (FileName == 0) {
                     Console.WriteLine("Hoi dit is te laag");
