@@ -7,22 +7,18 @@ namespace SheikahSlate.Client.Model
 {
     public class Item
     {
-        private string itemName { get; }
-        private byte itemID { get; }
-        private byte currentState { set; get; }
-        private byte maxState { get; }
+        private string ItemName { get; }
+        private byte ItemID { get; }
+        private byte CurrentState { get; set; }
+        private byte MaxState { get; }
         //TODO: Meer?
 
-        public Item(string Name, byte ID, byte State1, byte State2)
+        public Item(string itemName, byte itemId, byte currentState = 0, byte maxState = 1)
         {
-            itemName = Name;
-            itemID = ID;
-            currentState = State1;
-            maxState = State2;
+            ItemName = itemName;
+            ItemID = itemId;
+            CurrentState = currentState;
+            MaxState = maxState;
         }
-
-        public void incrementState() => currentState++;
-
-        public void decrementState() => currentState--;
     }
 }
