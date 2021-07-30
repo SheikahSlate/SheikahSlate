@@ -1,10 +1,9 @@
-﻿using SheikahSlate.Client.Model.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SheikahSlate.Client.Model
+/*namespace SheikahSlate.Client.Model
 {
     public class Dungeon
     {
@@ -15,4 +14,4 @@ namespace SheikahSlate.Client.Model
         public DungeonBossDrop BossDrop { get; set; }
         public Version Version { get; set; }
     }
-}
+}*/
