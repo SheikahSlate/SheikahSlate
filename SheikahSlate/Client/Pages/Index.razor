@@ -6,39 +6,4 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<h1>TEL AF NAAR DIKKESTINKBEER!!!</h1>
-@foreach (var item in items) {
-    <img src="Images/@item.Src" @onmouseup="item.clickAction" oncontextmenu="return false;" width="300px" />
-}
-
-@code {
-    List<Image> items = Enumerable.Range(1, 1).Select(i => new Image { FileName = 10}).ToList();
-
-    public class Image
-    {
-        public int FileName {get;set;}
-        public string Src => $"{FileName}.jpg";
-
-        public void clickAction(MouseEventArgs args) {
-            if (args.Button == 0) {
-                if (FileName == 0) {
-                    Console.WriteLine("Hoi dit is te laag");
-                    return;
-                } else {
-                    FileName--;
-                    return;
-                }
-            }
-            
-            if (args.Button == 2) {
-                if (FileName == 10) {
-                    Console.WriteLine("Hoi dit is te hoog");
-                    return;
-                } else {
-                    FileName++;
-                    return;
-                }
-            }
-        }
-    }
-}
+<StinkCount />
