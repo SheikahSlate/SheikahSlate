@@ -35,12 +35,28 @@ else
     </table>
 }
 
+@foreach (var item in items) {
+    <img src="Images/@item.ImageUrl" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="300px" />
+}
+
 @code {
     private IEnumerable<Item> items;
 
     protected override async Task OnInitializedAsync()
     {
         items = await Http.GetFromJsonAsync<IEnumerable<Item>>("Items");
+    }
+
+    private void clickHandler(MouseEventArgs args, Item item) {
+        if (args.Button == 0) {
+            item.CurrentState++;
+            return;
+        }
+            
+        if (args.Button == 2) {
+            item.CurrentState--;
+            return;
+        }
     }
 
 }
