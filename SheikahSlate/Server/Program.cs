@@ -14,6 +14,7 @@ namespace SheikahSlate.Server
     {
         public static void Main(string[] args)
         {
+            JsonParse.ReadItems();
             CreateHostBuilder(args).Build().Run();
             //Parse the JSON, return lists of classes
         }

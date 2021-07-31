@@ -5,20 +5,37 @@ using System.Threading.Tasks;
 
 namespace SheikahSlate.Shared.Model
 {
-    public class Item
+    public partial class Item
     {
-        private string ItemName { get; }
-        private byte ItemID { get; }
-        private byte CurrentState { get; set; }
-        private byte MaxState { get; }
+        public string ItemName { get; init; } = "Default Item (THIS IS BROKEN)";
+        public int ItemId { get; init; } = -1;
+        private int currentState = 0;
+        public int CurrentState 
+        { 
+            get 
+            {
+                return currentState;
+            } 
+            set
+            {
+                if (value > MaxState)
+                {
+                    currentState = MaxState;
+                }
+                else if (value < 0)
+                {
+                    currentState = 0;
+                }
+                else
+                {
+                    currentState = value;
+                }
+            }
+        }
+        public int MaxState { get; init; } = 1;
         //TODO: Meer?
 
-        public Item(string itemName, byte itemId, byte currentState = 0, byte maxState = 1)
-        {
-            ItemName = itemName;
-            ItemID = itemId;
-            CurrentState = currentState;
-            MaxState = maxState;
-        }
+        public string ImageUrl => $"{ItemId}-{currentState}.jpg";
+
     }
 }

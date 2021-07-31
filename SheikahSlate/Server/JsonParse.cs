@@ -3,13 +3,18 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using SheikahSlate.Shared.Model;
 using System.Collections.Generic;
+using System.IO;
 
 public class JsonParse
 {
-	public IEnumerable<Item> ReadItems()
+	public static IEnumerable<Item> ReadItems()
 	{
-		using var doc = JsonDocument.Parse(File.Open("Items.json"));
+		IEnumerable<Item> items = JsonSerializer.Deserialize<IEnumerable<Item>>(File.ReadAllText("Items.json"));
 
+		foreach (var item in items)
+        {
+			Console.WriteLine(item.ToString());
+		}
 
 		return items;
 	}
