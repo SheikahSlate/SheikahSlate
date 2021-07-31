@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SheikahSlate.Shared;
 
 namespace SheikahSlate.Server
 {
@@ -14,6 +15,7 @@ namespace SheikahSlate.Server
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            //Parse the JSON, return lists of classes
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

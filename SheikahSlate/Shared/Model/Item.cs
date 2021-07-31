@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SheikahSlate.Client.Model
+namespace SheikahSlate.Shared.Model
 {
     public class Item
     {
