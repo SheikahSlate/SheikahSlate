@@ -33,10 +33,11 @@ else
             }
         </tbody>
     </table>
-}
 
-@foreach (var item in items) {
-    <img src="Images/@item.ImageUrl" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="300px" />
+    @foreach (var item in items)
+    {
+        <img src="Images/@item.ImageUrl" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="300px" />
+    }
 }
 
 @code {
