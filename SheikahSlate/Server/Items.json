@@ -1,11 +1,14 @@
-{
-  "items": [
-    {
-      "itemID": "1",
-      "itemName": "Deku Sticks",
-      "currentState": "0",
-      "maxState": "3"
-    }
-    //TODO: Meer.
-  ]
-}
+[
+  {
+    "ItemName": "Deku Sticks",
+    "ItemId": 1,
+    "CurrentState": 0,
+    "MaxState": 3
+  },
+  {
+    "ItemName": "Deku Nuts",
+    "ItemId": 2,
+    "CurrentState": 0,
+    "MaxState": 3
+  }
+]

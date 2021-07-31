@@ -1,0 +1,46 @@
+﻿@page "/fetchitems"
+@using SheikahSlate.Shared.Model
+@inject HttpClient Http
+
+<h1>Items Forecast</h1>
+
+<p>I see Items in your future</p>
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Cur. State</th>
+                <th>Max. State</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.ItemId</td>
+                    <td>@item.ItemName</td>
+                    <td>@item.CurrentState</td>
+                    <td>@item.MaxState</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Item> items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await Http.GetFromJsonAsync<IEnumerable<Item>>("Items");
+    }
+
+}
