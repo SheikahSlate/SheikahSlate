@@ -13,11 +13,6 @@ namespace SheikahSlate.Server
         {
             IEnumerable<Item> items = JsonSerializer.Deserialize<IEnumerable<Item>>(File.ReadAllText("Items.json"));
 
-            foreach (Item item in items)
-            {
-                Console.WriteLine(item.ToString());
-            }
-
             return items;
         }
     }
