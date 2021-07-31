@@ -5,17 +5,20 @@ using SheikahSlate.Shared.Model;
 using System.Collections.Generic;
 using System.IO;
 
-public class JsonParse
+namespace SheikahSlate.Server
 {
-	public static IEnumerable<Item> ReadItems()
-	{
-		IEnumerable<Item> items = JsonSerializer.Deserialize<IEnumerable<Item>>(File.ReadAllText("Items.json"));
-
-		foreach (var item in items)
+    public class JsonParse
+    {
+        public static IEnumerable<Item> ReadItems()
         {
-			Console.WriteLine(item.ToString());
-		}
+            IEnumerable<Item> items = JsonSerializer.Deserialize<IEnumerable<Item>>(File.ReadAllText("Items.json"));
 
-		return items;
-	}
+            foreach (Item item in items)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
+            return items;
+        }
+    }
 }
