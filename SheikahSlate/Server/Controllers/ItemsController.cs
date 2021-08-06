@@ -22,9 +22,6 @@ namespace SheikahSlate.Server.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Item> Get()
-        {
-            return JsonParse.ReadItems();
-        }
+        public IEnumerable<Item> Get() => JsonParse.ReadItems();
     }
 }

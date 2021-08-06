@@ -9,7 +9,7 @@ namespace SheikahSlate.Shared.Model
     {
         public string ItemName { get; init; } = "Default Item";
         public int ItemId { get; init; } = -1;
-        private int currentState = 0;
+        private int currentState;
         public int CurrentState
         {
             get => currentState;
@@ -31,9 +31,28 @@ namespace SheikahSlate.Shared.Model
         }
         public int MaxState { get; init; } = 1;
 
-        public bool Countable { get; init; } = false;
+        public bool Countable { get; init; }
 
-        public string ImageUrl => $"{ItemId}-{currentState}.jpg";
-
+        public string ImageUrl
+        {
+            get
+            {
+                if (!Countable)
+                {
+                    return $"{ItemId}-{CurrentState}.jpg";
+                }
+                else
+                {
+                    if(currentState == 0)
+                    {
+                        return $"{ItemId}-0.jpg";
+                    }
+                    else
+                    {
+                        return $"{ItemId}-1.jpg";
+                    }
+                }
+            }
+        }
     }
 }
