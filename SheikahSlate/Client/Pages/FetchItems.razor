@@ -19,6 +19,8 @@ else
                 <th>Name</th>
                 <th>Cur. State</th>
                 <th>Max. State</th>
+                <th>Countable?</th>
+                <th>Count</th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +31,8 @@ else
                     <td>@item.ItemName</td>
                     <td>@item.CurrentState</td>
                     <td>@item.MaxState</td>
+                    <td>@item.Countable</td>
+                    <td>@item.Count</td>
                 </tr>
             }
         </tbody>
@@ -36,7 +40,11 @@ else
 
     @foreach (Item item in items)
     {
-        <img src="Images/@item.ImageUrl" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="300px" />
+        <img src="Images/@item.ImageUrl" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="32px" title="@item.ItemName"/>
+        @if (item.Countable)
+        {
+            @item.Count
+        }
     }
 }
 

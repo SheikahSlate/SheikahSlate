@@ -3,12 +3,136 @@
     "ItemName": "Deku Sticks",
     "ItemId": 1,
     "CurrentState": 0,
-    "MaxState": 3
+    "MaxState": 3,
+    "Countable": true,
+    "CountableMin": 10,
+    "CountableStep": 10
   },
   {
     "ItemName": "Deku Nuts",
     "ItemId": 2,
     "CurrentState": 0,
-    "MaxState": 3
+    "MaxState": 3,
+    "Countable": true,
+    "CountableMin": 20,
+    "CountableStep": 10
+  },
+  {
+    "ItemName": "Bombs",
+    "ItemId": 3,
+    "CurrentState": 0,
+    "MaxState": 3,
+    "Countable": true,
+    "CountableMin": 20,
+    "CountableStep": 10
+  },
+  {
+    "ItemName": "Fairy Bow/Arrows",
+    "ItemId": 4,
+    "CurrentState": 0,
+    "MaxState": 3,
+    "Countable": true,
+    "CountableMin": 30,
+    "CountableStep": 10
+  },
+  {
+    "ItemName": "Fire Arrows",
+    "ItemId": 5,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Din's Fire",
+    "ItemId": 6,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Kokiri Sword",
+    "ItemId": 7,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Master Sword",
+    "ItemId": 8,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Biggoron's Sword",
+    "ItemId": 9,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Slingshot",
+    "ItemId": 10,
+    "CurrentState": 0,
+    "MaxState": 3,
+    "Countable": true,
+    "CountableMin": 30,
+    "CountableStep": 10
+  },
+  {
+    "ItemName": "Ocarina",
+    "ItemId": 11,
+    "CurrentState": 0,
+    "MaxState": 2,
+    "Countable": false
+  },
+  {
+    "ItemName": "Bombchus",
+    "ItemId": 12,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Hookshot/Longshot",
+    "ItemId": 13,
+    "CurrentState": 0,
+    "MaxState": 2,
+    "Countable": false
+  },
+  {
+    "ItemName": "Ice Arrows",
+    "ItemId": 14,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Farore's Wind",
+    "ItemId": 15,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Deku Shield",
+    "ItemId": 16,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Hylian Shield",
+    "ItemId": 17,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
+  },
+  {
+    "ItemName": "Mirror Shield",
+    "ItemId": 18,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "Countable": false
   }
 ]

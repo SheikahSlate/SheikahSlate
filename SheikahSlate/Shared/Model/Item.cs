@@ -33,23 +33,43 @@ namespace SheikahSlate.Shared.Model
 
         public bool Countable { get; init; }
 
+        public int CountableMin { get;init; }
+
+        public int CountableStep { get; init; }
+
+        public int Count
+        {
+            get
+            {
+                if (currentState == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    //The minus 1 exists so this does the math for the amount @ state 1
+                    return CountableMin + (currentState - 1) * CountableStep;
+                }
+            }
+        }
+
         public string ImageUrl
         {
             get
             {
                 if (!Countable)
                 {
-                    return $"{ItemId}-{CurrentState}.jpg";
+                    return $"{ItemId}-{CurrentState}.png";
                 }
                 else
                 {
                     if(currentState == 0)
                     {
-                        return $"{ItemId}-0.jpg";
+                        return $"{ItemId}-0.png";
                     }
                     else
                     {
-                        return $"{ItemId}-1.jpg";
+                        return $"{ItemId}-1.png";
                     }
                 }
             }
