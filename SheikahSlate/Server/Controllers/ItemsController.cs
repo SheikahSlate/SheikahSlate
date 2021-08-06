@@ -14,17 +14,14 @@ namespace SheikahSlate.Server.Controllers
     public class ItemsController : ControllerBase
     {
 
-        private readonly ILogger<ItemsController> _logger;
+        private readonly ILogger<ItemsController> logger;
 
         public ItemsController(ILogger<ItemsController> logger)
         {
-            _logger = logger;
+            this.logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<Item> Get()
-        {
-            return JsonParse.ReadItems();
-        }
+        public IEnumerable<Item> Get() => JsonParse.ReadItems();
     }
 }

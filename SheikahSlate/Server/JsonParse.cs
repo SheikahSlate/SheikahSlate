@@ -7,7 +7,7 @@ using System.IO;
 
 namespace SheikahSlate.Server
 {
-    public class JsonParse
+    public static class JsonParse
     {
         public static IEnumerable<Item> ReadItems()
         {
