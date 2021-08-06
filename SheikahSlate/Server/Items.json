@@ -134,5 +134,279 @@
     "CurrentState": 0,
     "MaxState": 1,
     "Countable": false
+  },
+  {
+    "ItemName": "Boomerang",
+    "ItemId": 19,
+    "CurrentState": 0,
+    "MaxState": 3
+  },
+  {
+    "ItemName": "Lens of Truth",
+    "ItemId": 20,
+    "CurrentState": 0,
+    "MaxState": 3
+  },
+  {
+    "ItemName": "Magic Beans",
+    "ItemId": 21,
+    "CurrentState": 0,
+    "MaxState": 10,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Giant's Hammer",
+    "ItemId": 22,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Light Arrows",
+    "ItemId": 23,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Nayru's Love",
+    "ItemId": 24,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Kokiri Tunic",
+    "ItemId": 25,
+    "CurrentState": 0,
+    "MaxState": 0
+  },
+  {
+    "ItemName": "Goron Tunic",
+    "ItemId": 26,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Zora's Tunic",
+    "ItemId": 27,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Wallet",
+    "ItemId": 28,
+    "CurrentState": 0,
+    "MaxState": 3
+  },
+  {
+    "ItemName": "Skulltula Tokens",
+    "ItemId": 29,
+    "CurrentState": 0,
+    "MaxState": 100,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Bottle",
+    "ItemId": 30,
+    "CurrentState": 0,
+    "MaxState": 4,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Ruto's Letter",
+    "ItemId": 31,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Child Trade Sequence",
+    "ItemId": 32,
+    "CurrentState": 0,
+    "MaxState": 8
+  },
+  {
+    "ItemName": "Adult Trade Sequence",
+    "ItemId": 33,
+    "CurrentState": 0,
+    "MaxState": 11
+  },
+  {
+    "ItemName": "Kokiri Boots",
+    "ItemId": 34,
+    "CurrentState": 0,
+    "MaxState": 0
+  },
+  {
+    "ItemName": "Iron Boots",
+    "ItemId": 35,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Hover Boots",
+    "ItemId": 36,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Zora's Scale",
+    "ItemId": 37,
+    "CurrentState": 0,
+    "MaxState": 2
+  },
+  {
+    "ItemName": "Magic",
+    "ItemId": 38,
+    "CurrentState": 0,
+    "MaxState": 2
+  },
+  {
+    "ItemName": "Strength Upgrade",
+    "ItemId": 39,
+    "CurrentState": 0,
+    "MaxState": 3
+  },
+  {
+    "ItemName": "Gerudo Membership Card",
+    "ItemId": 40,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Stone of Agony",
+    "ItemId": 41,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Heart Piece",
+    "ItemId": 42,
+    "CurrentState": 0,
+    "MaxState": 36,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Heart Container",
+    "ItemId": 43,
+    "CurrentState": 0,
+    "MaxState": 8,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Double Defense",
+    "ItemId": 44,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "FOOL",
+    "ItemId": 45,
+    "CurrentState": 0,
+    "MaxState": 999,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Zelda's Lullaby",
+    "ItemId": 46,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Epona's Song",
+    "ItemId": 47,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Saria's Song",
+    "ItemId": 48,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Sun's Song",
+    "ItemId": 49,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Song of Time",
+    "ItemId": 50,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Song of Storms",
+    "ItemId": 51,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Scarecrow's Song",
+    "ItemId": 52,
+    "CurrentState": 0,
+    "MaxState": 1
+  },
+  {
+    "ItemName": "Triforce Piece",
+    "ItemId": 53,
+    "CurrentState": 0,
+    "MaxState": 999,
+    "Countable": true,
+    "CountableMin": 1,
+    "CountableStep": 1
+  },
+  {
+    "ItemName": "Minuet of Forest",
+    "ItemId": 54,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "HelpText": "FRT"
+  },
+  {
+    "ItemName": "Bolero of Fire",
+    "ItemId": 55,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "HelpText": "FIR"
+  },
+  {
+    "ItemName": "Serenade of Water",
+    "ItemId": 56,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "HelpText": "WTR"
+  },
+  {
+    "ItemName": "Requiem of Spirit",
+    "ItemId": 57,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "HelpText": "SPR"
+  },
+  {
+    "ItemName": "Nocturne of Shadow",
+    "ItemId": 58,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "HelpText": "SHD"
+  },
+  {
+    "ItemName": "Prelude of Light",
+    "ItemId": 59,
+    "CurrentState": 0,
+    "MaxState": 1,
+    "HelpText": "LGT"
   }
+  
 ]
