@@ -7,15 +7,12 @@ namespace SheikahSlate.Shared.Model
 {
     public partial class Item
     {
-        public string ItemName { get; init; } = "Default Item (THIS IS BROKEN)";
+        public string ItemName { get; init; } = "Default Item";
         public int ItemId { get; init; } = -1;
         private int currentState = 0;
-        public int CurrentState 
-        { 
-            get 
-            {
-                return currentState;
-            } 
+        public int CurrentState
+        {
+            get => currentState;
             set
             {
                 if (value > MaxState)
@@ -33,7 +30,8 @@ namespace SheikahSlate.Shared.Model
             }
         }
         public int MaxState { get; init; } = 1;
-        //TODO: Meer?
+
+        public bool Countable { get; init; } = false;
 
         public string ImageUrl => $"{ItemId}-{currentState}.jpg";
 
