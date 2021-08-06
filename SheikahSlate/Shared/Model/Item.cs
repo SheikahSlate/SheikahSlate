@@ -31,7 +31,7 @@ namespace SheikahSlate.Shared.Model
         }
         public int MaxState { get; init; } = 1;
 
-        public bool Countable { get; init; }
+        public bool Countable => CountableStep != 0;
 
         public int CountableMin { get;init; }
 
@@ -49,7 +49,7 @@ namespace SheikahSlate.Shared.Model
                 }
                 else
                 {
-                    //The minus 1 exists so this does the math for the amount @ state 1
+                    // -1 because state 0 means no items, state 1 means minimum, etc
                     return CountableMin + (currentState - 1) * CountableStep;
                 }
             }
