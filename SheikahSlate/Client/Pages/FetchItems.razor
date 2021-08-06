@@ -45,7 +45,7 @@ else
         {
             @item.Count
         }
-        @if (item.HelpText != "NON")
+        @if (item.HelpText is not null)
         {
             @item.HelpText
         }
