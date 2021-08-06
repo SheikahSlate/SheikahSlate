@@ -14,11 +14,12 @@ namespace SheikahSlate.Server.Controllers
     public class ItemsController : ControllerBase
     {
 
-        private readonly ILogger<ItemsController> _logger;
+        private readonly ILogger<ItemsController> logger;
 
         public ItemsController(ILogger<ItemsController> logger)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.logger.LogInformation("test");
         }
 
         [HttpGet]

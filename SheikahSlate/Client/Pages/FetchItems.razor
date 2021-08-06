@@ -40,7 +40,7 @@ else
 
     @foreach (Item item in items)
     {
-        <img src="Images/@item.ImageUrl" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="32px" title="@item.ItemName"/>
+        <img src="Images/@item.ImageFileName" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="32px" title="@item.ItemName"/>
         @if (item.Countable)
         {
             @item.Count

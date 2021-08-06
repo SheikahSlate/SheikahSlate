@@ -10,20 +10,17 @@ using SheikahSlate.Shared;
 
 namespace SheikahSlate.Server
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
-            JsonParse.ReadItems();
+            _ = JsonParse.ReadItems();
             CreateHostBuilder(args).Build().Run();
             //Parse the JSON, return lists of classes
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
     }
 }

@@ -53,7 +53,7 @@ namespace SheikahSlate.Shared.Model
             }
         }
 
-        public string ImageUrl
+        public string ImageFileName
         {
             get
             {
