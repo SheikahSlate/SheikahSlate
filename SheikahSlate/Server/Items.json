@@ -139,13 +139,13 @@
     "ItemName": "Boomerang",
     "ItemId": 19,
     "CurrentState": 0,
-    "MaxState": 3
+    "MaxState": 1
   },
   {
     "ItemName": "Lens of Truth",
     "ItemId": 20,
     "CurrentState": 0,
-    "MaxState": 3
+    "MaxState": 1
   },
   {
     "ItemName": "Magic Beans",
@@ -371,7 +371,7 @@
     "ItemId": 54,
     "CurrentState": 0,
     "MaxState": 1,
-    "HelpText": "FRT"
+    "HelpText": "FST"
   },
   {
     "ItemName": "Bolero of Fire",
