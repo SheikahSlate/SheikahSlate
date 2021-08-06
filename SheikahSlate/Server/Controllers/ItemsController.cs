@@ -19,6 +19,7 @@ namespace SheikahSlate.Server.Controllers
         public ItemsController(ILogger<ItemsController> logger)
         {
             this.logger = logger;
+            this.logger.LogInformation("test");
         }
 
         [HttpGet]

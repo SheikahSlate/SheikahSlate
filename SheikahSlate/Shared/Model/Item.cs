@@ -33,7 +33,26 @@ namespace SheikahSlate.Shared.Model
 
         public bool Countable { get; init; }
 
-        public string ImageFileName => $"{ItemId}-{currentState}.jpg";
-
+        public string ImageFileName
+        {
+            get
+            {
+                if (!Countable)
+                {
+                    return $"{ItemId}-{CurrentState}.jpg";
+                }
+                else
+                {
+                    if(currentState == 0)
+                    {
+                        return $"{ItemId}-0.jpg";
+                    }
+                    else
+                    {
+                        return $"{ItemId}-1.jpg";
+                    }
+                }
+            }
+        }
     }
 }
