@@ -2,411 +2,282 @@
   {
     "ItemName": "Deku Sticks",
     "ItemId": 1,
-    "CurrentState": 0,
     "MaxState": 3,
-    "Countable": true,
     "CountableMin": 10,
     "CountableStep": 10
   },
   {
     "ItemName": "Deku Nuts",
     "ItemId": 2,
-    "CurrentState": 0,
     "MaxState": 3,
-    "Countable": true,
     "CountableMin": 20,
     "CountableStep": 10
   },
   {
     "ItemName": "Bombs",
     "ItemId": 3,
-    "CurrentState": 0,
     "MaxState": 3,
-    "Countable": true,
     "CountableMin": 20,
     "CountableStep": 10
   },
   {
     "ItemName": "Fairy Bow/Arrows",
     "ItemId": 4,
-    "CurrentState": 0,
     "MaxState": 3,
-    "Countable": true,
     "CountableMin": 30,
     "CountableStep": 10
   },
   {
     "ItemName": "Fire Arrows",
-    "ItemId": 5,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 5
   },
   {
     "ItemName": "Din's Fire",
-    "ItemId": 6,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 6
   },
   {
     "ItemName": "Kokiri Sword",
-    "ItemId": 7,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 7
   },
   {
     "ItemName": "Master Sword",
-    "ItemId": 8,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 8
   },
   {
     "ItemName": "Biggoron's Sword",
-    "ItemId": 9,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 9
   },
   {
     "ItemName": "Slingshot",
     "ItemId": 10,
-    "CurrentState": 0,
     "MaxState": 3,
-    "Countable": true,
     "CountableMin": 30,
     "CountableStep": 10
   },
   {
     "ItemName": "Ocarina",
     "ItemId": 11,
-    "CurrentState": 0,
-    "MaxState": 2,
-    "Countable": false
+    "MaxState": 2
   },
   {
     "ItemName": "Bombchus",
-    "ItemId": 12,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 12
   },
   {
     "ItemName": "Hookshot/Longshot",
     "ItemId": 13,
-    "CurrentState": 0,
-    "MaxState": 2,
-    "Countable": false
+    "MaxState": 2
   },
   {
     "ItemName": "Ice Arrows",
-    "ItemId": 14,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 14
   },
   {
     "ItemName": "Farore's Wind",
-    "ItemId": 15,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 15
   },
   {
     "ItemName": "Deku Shield",
-    "ItemId": 16,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 16
   },
   {
     "ItemName": "Hylian Shield",
-    "ItemId": 17,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 17
   },
   {
     "ItemName": "Mirror Shield",
-    "ItemId": 18,
-    "CurrentState": 0,
-    "MaxState": 1,
-    "Countable": false
+    "ItemId": 18
   },
   {
     "ItemName": "Boomerang",
-    "ItemId": 19,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 19
   },
   {
     "ItemName": "Lens of Truth",
-    "ItemId": 20,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 20
   },
   {
     "ItemName": "Magic Beans",
     "ItemId": 21,
-    "CurrentState": 0,
     "MaxState": 10,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Giant's Hammer",
-    "ItemId": 22,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 22
   },
   {
     "ItemName": "Light Arrows",
-    "ItemId": 23,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 23
   },
   {
     "ItemName": "Nayru's Love",
-    "ItemId": 24,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 24
   },
   {
     "ItemName": "Kokiri Tunic",
     "ItemId": 25,
-    "CurrentState": 0,
     "MaxState": 0
   },
   {
     "ItemName": "Goron Tunic",
-    "ItemId": 26,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 26
   },
   {
     "ItemName": "Zora's Tunic",
-    "ItemId": 27,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 27
   },
   {
     "ItemName": "Wallet",
     "ItemId": 28,
-    "CurrentState": 0,
     "MaxState": 3
   },
   {
     "ItemName": "Skulltula Tokens",
     "ItemId": 29,
-    "CurrentState": 0,
     "MaxState": 100,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Bottle",
     "ItemId": 30,
-    "CurrentState": 0,
     "MaxState": 4,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Ruto's Letter",
-    "ItemId": 31,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 31
   },
   {
     "ItemName": "Child Trade Sequence",
     "ItemId": 32,
-    "CurrentState": 0,
     "MaxState": 8
   },
   {
     "ItemName": "Adult Trade Sequence",
     "ItemId": 33,
-    "CurrentState": 0,
     "MaxState": 11
   },
   {
     "ItemName": "Kokiri Boots",
     "ItemId": 34,
-    "CurrentState": 0,
     "MaxState": 0
   },
   {
     "ItemName": "Iron Boots",
-    "ItemId": 35,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 35
   },
   {
     "ItemName": "Hover Boots",
-    "ItemId": 36,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 36
   },
   {
     "ItemName": "Zora's Scale",
     "ItemId": 37,
-    "CurrentState": 0,
     "MaxState": 2
   },
   {
     "ItemName": "Magic",
     "ItemId": 38,
-    "CurrentState": 0,
     "MaxState": 2
   },
   {
     "ItemName": "Strength Upgrade",
     "ItemId": 39,
-    "CurrentState": 0,
     "MaxState": 3
   },
   {
     "ItemName": "Gerudo Membership Card",
-    "ItemId": 40,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 40
   },
   {
     "ItemName": "Stone of Agony",
-    "ItemId": 41,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 41
   },
   {
     "ItemName": "Heart Piece",
     "ItemId": 42,
-    "CurrentState": 0,
     "MaxState": 36,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Heart Container",
     "ItemId": 43,
-    "CurrentState": 0,
     "MaxState": 8,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Double Defense",
-    "ItemId": 44,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 44
   },
   {
     "ItemName": "FOOL",
     "ItemId": 45,
-    "CurrentState": 0,
     "MaxState": 999,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Zelda's Lullaby",
-    "ItemId": 46,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 46
   },
   {
     "ItemName": "Epona's Song",
-    "ItemId": 47,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 47
   },
   {
     "ItemName": "Saria's Song",
-    "ItemId": 48,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 48
   },
   {
     "ItemName": "Sun's Song",
-    "ItemId": 49,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 49
   },
   {
     "ItemName": "Song of Time",
-    "ItemId": 50,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 50
   },
   {
     "ItemName": "Song of Storms",
-    "ItemId": 51,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 51
   },
   {
     "ItemName": "Scarecrow's Song",
-    "ItemId": 52,
-    "CurrentState": 0,
-    "MaxState": 1
+    "ItemId": 52
   },
   {
     "ItemName": "Triforce Piece",
     "ItemId": 53,
-    "CurrentState": 0,
     "MaxState": 999,
-    "Countable": true,
-    "CountableMin": 1,
     "CountableStep": 1
   },
   {
     "ItemName": "Minuet of Forest",
     "ItemId": 54,
-    "CurrentState": 0,
-    "MaxState": 1,
     "HelpText": "FST"
   },
   {
     "ItemName": "Bolero of Fire",
     "ItemId": 55,
-    "CurrentState": 0,
-    "MaxState": 1,
     "HelpText": "FIR"
   },
   {
     "ItemName": "Serenade of Water",
     "ItemId": 56,
-    "CurrentState": 0,
-    "MaxState": 1,
     "HelpText": "WTR"
   },
   {
     "ItemName": "Requiem of Spirit",
     "ItemId": 57,
-    "CurrentState": 0,
-    "MaxState": 1,
     "HelpText": "SPR"
   },
   {
     "ItemName": "Nocturne of Shadow",
     "ItemId": 58,
-    "CurrentState": 0,
-    "MaxState": 1,
     "HelpText": "SHD"
   },
   {
     "ItemName": "Prelude of Light",
     "ItemId": 59,
-    "CurrentState": 0,
-    "MaxState": 1,
     "HelpText": "LGT"
   }
-  
 ]

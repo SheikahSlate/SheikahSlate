@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,7 @@ namespace SheikahSlate.Client
             builder.RootComponents.Add<App>("#app");
 
             _ = builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            _ = builder.Services.AddBlazoredLocalStorage();
 
             await builder.Build().RunAsync().ConfigureAwait(true);
         }

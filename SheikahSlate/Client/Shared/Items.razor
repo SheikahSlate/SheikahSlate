@@ -1,5 +1,5 @@
-﻿@using SheikahSlate.Shared.Model
-@inject HttpClient Http
+﻿@inject HttpClient Http
+@inject ILocalStorageService LocalStorage
 
 @if (items is null)
 {
@@ -7,10 +7,9 @@
 }
 else
 {
-
     @foreach (Item item in items)
     {
-        <img src="Images/@item.ImageFileName" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="32px" title="@item.ItemName"/>
+        <img src="Images/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.ItemName"/>
         @if (item.Countable)
         {
             @item.Count
@@ -19,27 +18,46 @@ else
         {
             @item.HelpText
         }
-        
     }
 }
 
 @code {
     private IEnumerable<Item> items;
+    private IDictionary<int, int> storedItemStates;
 
     protected override async Task OnInitializedAsync()
     {
-        items = await Http.GetFromJsonAsync<IEnumerable<Item>>("Items");
+        Task<IEnumerable<Item>> defaultItemsTask = Http.GetFromJsonAsync<IEnumerable<Item>>("Items");
+
+        storedItemStates = await LocalStorage.GetItemAsync<IDictionary<int, int>>("Items");
+        items = await defaultItemsTask;
+        Console.WriteLine("Obtained items, merging...");
+        if (storedItemStates is null)
+        {
+            storedItemStates = new Dictionary<int, int>();
+        }
+        else
+        {
+            foreach (KeyValuePair<int, int> storedItem in storedItemStates) {
+                items.FirstOrDefault(item => item.ItemId == storedItem.Key).CurrentState = storedItem.Value;
+            }
+        }
     }
 
-    private void clickHandler(MouseEventArgs args, Item item) {
-        if (args.Button == 0) {
-            item.CurrentState++;
-            return;
-        }
-            
-        if (args.Button == 2) {
-            item.CurrentState--;
-            return;
+    private async Task clickHandlerAsync(MouseEventArgs args, Item item) {
+        switch (args.Button) {
+            case 0: {
+				item.CurrentState++;
+				storedItemStates[item.ItemId] = item.CurrentState;
+				await LocalStorage.SetItemAsync("Items", storedItemStates);
+                break;
+            }
+            case 2: {
+				item.CurrentState--;
+				storedItemStates[item.ItemId] = item.CurrentState;
+				await LocalStorage.SetItemAsync("Items", storedItemStates);
+                break;
+            }
         }
     }
 }
