@@ -5,6 +5,7 @@ using SheikahSlate.Shared.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace SheikahSlate.Server.Controllers
@@ -22,6 +23,6 @@ namespace SheikahSlate.Server.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Item> Get() => JsonParse.ReadItems();
+        public IEnumerable<Item> Get() => JsonSerializer.Deserialize<IEnumerable<Item>>(System.IO.File.ReadAllText("Items.json"));
     }
 }

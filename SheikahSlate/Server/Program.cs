@@ -12,12 +12,7 @@ namespace SheikahSlate.Server
 {
     public static class Program
     {
-        public static void Main(string[] args)
-        {
-            _ = JsonParse.ReadItems();
-            CreateHostBuilder(args).Build().Run();
-            //Parse the JSON, return lists of classes
-        }
+        public static void Main(string[] args) => CreateHostBuilder(args).Build().Run();
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
