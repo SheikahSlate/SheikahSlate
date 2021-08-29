@@ -8,6 +8,10 @@
     grid-row-end: bottom;
 }
 
+body {
+    margin: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: [left] 33vw [mapleft] 33vw [mapright] 33vw [right];
