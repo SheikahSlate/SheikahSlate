@@ -6,38 +6,13 @@
 
 <p>Debug Item Table</p>
 
+
 @if (items is null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Cur. State</th>
-                <th>Max. State</th>
-                <th>Countable?</th>
-                <th>Count</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (Item item in items)
-            {
-                <tr>
-                    <td>@item.ItemId</td>
-                    <td>@item.ItemName</td>
-                    <td>@item.CurrentState</td>
-                    <td>@item.MaxState</td>
-                    <td>@item.Countable</td>
-                    <td>@item.Count</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
     @foreach (Item item in items)
     {
         <img src="Images/@item.ImageFileName" @onmouseup="@(e => clickHandler(e, item))" oncontextmenu="return false;" width="32px" title="@item.ItemName"/>
