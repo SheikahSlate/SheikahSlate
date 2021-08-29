@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.items {
+    grid-area: items;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [left] 1fr [mapleft] 1fr [mapright] 1fr [right];
+    grid-template-rows: [top] 1fr [test1] 1fr [test2] 1fr [bottom]; /*This is very temporary and should be fixed when it's relevant*/
+    grid-template-areas:
+        "header header header"
+        "items . ."
+        ". . .";
+    gap: 5px 5px;
+}
