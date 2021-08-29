@@ -1,17 +1,17 @@
-﻿body {
-}
-
-.items {
+﻿.items {
     grid-area: items;
+    justify-self: stretch;
+    background-color: black;
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: top;
+    grid-row-end: bottom;
 }
 
 .container {
     display: grid;
-    grid-template-columns: [left] 1fr [mapleft] 1fr [mapright] 1fr [right];
-    grid-template-rows: [top] 1fr [test1] 1fr [test2] 1fr [bottom]; /*This is very temporary and should be fixed when it's relevant*/
-    grid-template-areas:
-        "header header header"
-        "items . ."
-        ". . .";
+    grid-template-columns: [left] 33vw [mapleft] 33vw [mapright] 33vw [right];
+    grid-template-rows: [top] 33vh [test1] 33vh [test2] 33vh [bottom]; /*This is very temporary and should be fixed when it's relevant*/
     gap: 5px 5px;
+    align-items: stretch;
 }
