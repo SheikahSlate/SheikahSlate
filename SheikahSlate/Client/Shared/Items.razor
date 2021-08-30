@@ -50,16 +50,14 @@ else
         switch (args.Button) {
             case 0: {
 				item.CurrentState++;
-				storedItemStates[item.Id] = item.CurrentState;
-				await LocalStorage.SetItemAsync("Items", storedItemStates);
                 break;
             }
             case 2: {
 				item.CurrentState--;
-				storedItemStates[item.Id] = item.CurrentState;
-				await LocalStorage.SetItemAsync("Items", storedItemStates);
                 break;
             }
         }
+		storedItemStates[item.Id] = item.CurrentState;
+		await LocalStorage.SetItemAsync("Items", storedItemStates);
     }
 }
