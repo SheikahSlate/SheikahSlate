@@ -3,17 +3,21 @@
 }
 
 .topbar {
-    grid-area: topbar;
+    display: flex;
     background-color: deeppink;
     grid-column-start: left;
     grid-column-end: right;
     grid-row-start: top;
     grid-row-end: belowtopbar;
     border: 2px solid yellow;
+    justify-content: center;
+    align-content: center;
+    font-size: 3em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: greenyellow;
 }
 
 .bottombar {
-    grid-area: bottombar;
     background-color: greenyellow;
     grid-column-start: left;
     grid-column-end: right;
@@ -36,7 +40,7 @@
     background-color: navajowhite;
     border: 2px solid yellow;
     align-self: flex-end;
-    min-height: 400px; /*Resize it to be good*/
+    min-height: 400px; /*TODO: Resize it to be good*/
 }
 
 .dungeonitems {
@@ -44,11 +48,10 @@
     border: 2px solid yellow;
     align-self: stretch;
     flex-grow: 4;
-    min-height: 400px; /*Resize it to be good*/
+    min-height: 400px; /*TODO: Resize it to be good*/
 }
 
 .itemchecks {
-    grid-area: itemchecks;
     background-color: darkorange;
     grid-column-start: mapright;
     grid-column-end: right;
@@ -58,7 +61,6 @@
 }
 
 .map {
-    grid-area: map;
     background-color: darkblue;
     grid-column-start: mapleft;
     grid-column-end: mapright;
@@ -75,7 +77,7 @@ html {
 .container {
     display: grid;
     grid-template-columns: [left] 300px [mapleft] 1fr [mapright] 300px [right];
-    grid-template-rows: [top] 4em [belowtopbar] 1fr [abovebottombar] 4em [bottom]; /*This is very temporary and should be fixed when it's relevant*/
+    grid-template-rows: [top] 4em [belowtopbar] 1fr [abovebottombar] 4em [bottom];
     gap: 0px 0px;
     height: 100vh;
 }
