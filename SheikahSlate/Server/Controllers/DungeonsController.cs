@@ -12,9 +12,12 @@ namespace SheikahSlate.Server.Controllers
 {
     [ApiController]
     [Route("/Api/[controller]")]
-    public class ItemsController : ControllerBase
+    public class DungeonsController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Item> Get() => JsonSerializer.Deserialize<IEnumerable<Item>>(System.IO.File.ReadAllText("Items.json"));
+        public IEnumerable<Dungeon> Get() { 
+            List<Dungeon> dungeons = JsonSerializer.Deserialize<IEnumerable<Dungeon>>(System.IO.File.ReadAllText("Dungeons.json")).ToList();
+            return dungeons;
+        }
     }
 }

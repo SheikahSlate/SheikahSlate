@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace SheikahSlate.Shared.Model
 {
-    public partial class Item
+    public class Item
     {
-        public string ItemName { get; init; } = "Default Item";
-        public int ItemId { get; init; } = -1;
+        public string Name { get; init; } = "Default Item";
+        public int Id { get; init; } = -1;
         private int currentState;
         public int CurrentState
         {
@@ -33,7 +33,7 @@ namespace SheikahSlate.Shared.Model
 
         public bool Countable => CountableStep != 0;
 
-        public int CountableMin { get;init; }
+        public int CountableMin { get; init; } = 1;
 
         public int CountableStep { get; init; }
 
@@ -61,17 +61,17 @@ namespace SheikahSlate.Shared.Model
             {
                 if (!Countable)
                 {
-                    return $"{ItemId}-{CurrentState}.png";
+                    return $"{Id}-{CurrentState}.png";
                 }
                 else
                 {
                     if(currentState == 0)
                     {
-                        return $"{ItemId}-0.png";
+                        return $"{Id}-0.png";
                     }
                     else
                     {
-                        return $"{ItemId}-1.png";
+                        return $"{Id}-1.png";
                     }
                 }
             }

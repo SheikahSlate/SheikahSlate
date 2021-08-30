@@ -1,0 +1,269 @@
+[
+  {
+    "Name": "Link",
+    "Shorthand": "Link",
+    "Id": 1,
+    "HasReward": true
+  },
+  {
+    "Name": "Deku Tree",
+    "Shorthand": "Deku",
+    "Id": 2,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Deku Tree Map",
+        "Id": 3
+      },
+      {
+        "Name": "Deku Tree Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Dodongo's Cavern",
+    "Shorthand": "DCVN",
+    "Id": 3,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Dodongo's Cavern Map",
+        "Id": 3
+      },
+      {
+        "Name": "Dodongo's Cavern Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Inside Jabu-Jabu's Belly",
+    "Shorthand": "Jabu",
+    "Id": 4,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Inside Jabu-Jabu's Belly Map",
+        "Id": 3
+      },
+      {
+        "Name": "Inside Jabu-Jabu's Belly Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Forest Temple",
+    "Shorthand": "FRST",
+    "Id": 5,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Forest Temple Small Key",
+        "Id": 1,
+        "MaxState": 6,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Forest Temple Boss Key",
+        "Id": 2
+      },
+      {
+        "Name": "Forest Temple Map",
+        "Id": 3
+      },
+      {
+        "Name": "Forest Temple Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Fire Temple",
+    "Shorthand": "Fire",
+    "Id": 6,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Fire Temple Small Key",
+        "Id": 1,
+        "MaxState": 8,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Fire Temple Boss Key",
+        "Id": 2
+      },
+      {
+        "Name": "Fire Temple Map",
+        "Id": 3
+      },
+      {
+        "Name": "Fire Temple Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Water Temple",
+    "Shorthand": "WATR",
+    "Id": 7,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Water Temple Small Key",
+        "Id": 1,
+        "MaxState": 6,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Water Temple Boss Key",
+        "Id": 2
+      },
+      {
+        "Name": "Water Temple Map",
+        "Id": 3
+      },
+      {
+        "Name": "Water Temple Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Shadow Temple",
+    "Shorthand": "SHDW",
+    "Id": 8,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Shadow Temple Small Key",
+        "Id": 1,
+        "MaxState": 6,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Shadow Temple Boss Key",
+        "Id": 2
+      },
+      {
+        "Name": "Shadow Temple Map",
+        "Id": 3
+      },
+      {
+        "Name": "Shadow Temple Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Spirit Temple",
+    "Shorthand": "SPRT",
+    "Id": 9,
+    "HasReward": true,
+    "Items": [
+      {
+        "Name": "Spirit Temple Small Key",
+        "Id": 1,
+        "MaxState": 7,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Spirit Temple Boss Key",
+        "Id": 2
+      },
+      {
+        "Name": "Spirit Temple Map",
+        "Id": 3
+      },
+      {
+        "Name": "Spirit Temple Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Bottom of the Well",
+    "Shorthand": "BotW",
+    "Id": 10,
+    "Items": [
+      {
+        "Name": "Bottom of the Well Small Key",
+        "Id": 1,
+        "MaxState": 3,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Bottom of the Well Map",
+        "Id": 3
+      },
+      {
+        "Name": "Bottom of the Well Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Ice Cavern",
+    "Shorthand": "IceC",
+    "Id": 11,
+    "Items": [
+      {
+        "Name": "Ice Cavern Map",
+        "Id": 3
+      },
+      {
+        "Name": "Ice Cavern Compass",
+        "Id": 4
+      }
+    ]
+  },
+  {
+    "Name": "Gerudo's Fortress",
+    "Shorthand": "GF",
+    "Id": 12,
+    "Items": [
+      {
+        "Name": "Gerudo's Fortress Small Key",
+        "Id": 1,
+        "MaxState": 4,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Gerudo Membership Card",
+        "Id": 5
+      }
+    ]
+  },
+  {
+    "Name": "Gerudo's Training Grounds",
+    "Shorthand": "GTG",
+    "Id": 13,
+    "Items": [
+      {
+        "Name": "Gerudo's Training Grounds Small Key",
+        "Id": 1,
+        "MaxState": 9,
+        "CountableStep": 1
+      }
+    ]
+  },
+  {
+    "Name": "Ganon's Castle",
+    "Shorthand": "GC",
+    "Id": 14,
+    "Items": [
+      {
+        "Name": "Ganon's Castle Small Key",
+        "Id": 1,
+        "MaxState": 3,
+        "CountableStep": 1
+      },
+      {
+        "Name": "Ganon's Castle Boss Key",
+        "Id": 2
+      }
+    ]
+  }
+]

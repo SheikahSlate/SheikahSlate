@@ -1,0 +1,84 @@
+﻿@inject HttpClient Http
+@inject ILocalStorageService LocalStorage
+
+<div class="dungeons">
+@if (dungeons is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (Dungeon dungeon in dungeons)
+    {
+        <div class="dungeon">
+			@dungeon.Name
+			@foreach (Item item in dungeon.Items)
+			{
+				<img src="Images/DungeonItems/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, dungeon, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
+				@if (item.Countable)
+				{
+					@item.Count
+				}
+			}
+		</div>
+    }
+}
+</div>
+
+@code {
+    private IEnumerable<Dungeon> dungeons;
+    private IDictionary<int, IDictionary<int, int>> storedDungeonStates;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Task<IEnumerable<Dungeon>> defaultDungeonsTask = Http.GetFromJsonAsync<IEnumerable<Dungeon>>("/Api/Dungeons");
+
+        storedDungeonStates = await LocalStorage.GetItemAsync<IDictionary<int, IDictionary<int, int>>>("Dungeons");
+        dungeons = await defaultDungeonsTask;
+        Console.WriteLine("Obtained dungeons, merging...");
+        if (storedDungeonStates is null)
+        {
+            storedDungeonStates = new Dictionary<int, IDictionary<int, int>>();
+        }
+        else
+        {
+            foreach (KeyValuePair<int, IDictionary<int, int>> storedDungeon in storedDungeonStates) {
+                Dungeon dungeon = dungeons.FirstOrDefault(d => d.Id == storedDungeon.Key);
+                if (dungeon is null) {
+                    continue;
+                }
+                else
+                {
+					foreach (KeyValuePair<int, int> storedItem in storedDungeon.Value) {
+                        Item item = dungeon.Items.FirstOrDefault(i => i.Id == storedItem.Key);
+                        if (item is null) {
+                            continue;
+                        }
+                        else
+                        {
+							item.CurrentState = storedItem.Value;
+                        }
+					}
+                }
+            }
+        }
+    }
+
+    private async Task clickHandlerAsync(MouseEventArgs args, Dungeon dungeon, Item item) {
+        switch (args.Button) {
+            case 0: {
+				item.CurrentState++;
+                break;
+            }
+            case 2: {
+				item.CurrentState--;
+                break;
+            }
+        }
+		if (!storedDungeonStates.ContainsKey(dungeon.Id)) {
+			storedDungeonStates[dungeon.Id] = new Dictionary<int, int>();
+		}
+		storedDungeonStates[dungeon.Id][item.Id] = item.CurrentState;
+		await LocalStorage.SetItemAsync("Dungeons", storedDungeonStates);
+    }
+}
