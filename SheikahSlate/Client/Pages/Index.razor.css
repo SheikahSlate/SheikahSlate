@@ -60,7 +60,7 @@
     grid-row-end: abovebottombar;
     border: 2px solid yellow;
     min-height: 100%;
-    overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
