@@ -1,21 +1,81 @@
-﻿.items {
-    grid-area: items;
-    justify-self: stretch;
-    background-color: black;
+﻿* {
+    box-sizing: border-box;
+}
+
+.topbar {
+    grid-area: topbar;
+    background-color: deeppink;
     grid-column-start: left;
     grid-column-end: right;
     grid-row-start: top;
-    grid-row-end: bottom;
+    grid-row-end: belowtopbar;
+    border: 2px solid yellow;
 }
 
-body {
+.bottombar {
+    grid-area: bottombar;
+    background-color: greenyellow;
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: abovebottombar;
+    grid-row-end: bottom;
+    border: 2px solid yellow;
+}
+
+.leftbar {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    grid-column-start: left;
+    grid-column-end: mapleft;
+    grid-row-start: belowtopbar;
+    grid-row-end: abovebottombar;
+}
+
+.items {
+    background-color: navajowhite;
+    border: 2px solid yellow;
+    align-self: flex-end;
+    min-height: 400px; /*Resize it to be good*/
+}
+
+.dungeonitems {
+    background-color: lightskyblue;
+    border: 2px solid yellow;
+    align-self: stretch;
+    flex-grow: 4;
+    min-height: 400px; /*Resize it to be good*/
+}
+
+.itemchecks {
+    grid-area: itemchecks;
+    background-color: darkorange;
+    grid-column-start: mapright;
+    grid-column-end: right;
+    grid-row-start: belowtopbar;
+    grid-row-end: abovebottombar;
+    border: 2px solid yellow;
+}
+
+.map {
+    grid-area: map;
+    background-color: darkblue;
+    grid-column-start: mapleft;
+    grid-column-end: mapright;
+    grid-row-start: belowtopbar;
+    grid-row-end: abovebottombar;
+    border: 2px solid yellow;
+}
+ 
+html {
     margin: 0;
+    padding: 0;
 }
 
 .container {
     display: grid;
-    grid-template-columns: [left] 33vw [mapleft] 33vw [mapright] 33vw [right];
-    grid-template-rows: [top] 33vh [test1] 33vh [test2] 33vh [bottom]; /*This is very temporary and should be fixed when it's relevant*/
-    gap: 5px 5px;
-    align-items: stretch;
+    grid-template-columns: [left] 300px [mapleft] 1fr [mapright] 300px [right];
+    grid-template-rows: [top] 4em [belowtopbar] 1fr [abovebottombar] 4em [bottom]; /*This is very temporary and should be fixed when it's relevant*/
+    gap: 0px 0px;
+    height: 100vh;
 }
