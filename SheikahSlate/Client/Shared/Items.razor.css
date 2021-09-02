@@ -1,23 +1,13 @@
 ﻿.items {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-areas:
-        "g1 . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
-        ". . . . . . . . ."
+    width: 100%;
 }
 
-.grid {
+.item-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.grid-item {
     position: relative;
 }
 

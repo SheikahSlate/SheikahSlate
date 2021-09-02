@@ -37,9 +37,9 @@ namespace SheikahSlate.Shared.Model
 
         public int CountableStep { get; init; }
 
-        public int GridX { get; init; } = -1;
+        public int GridRow { get; init; } = -1;
 
-        public int GridY { get; init; } = -1;
+        public int GridColumn { get; init; } = -1;
 
         public string HelpText { get; init; } = "";
 
