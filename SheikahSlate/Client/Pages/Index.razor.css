@@ -40,7 +40,7 @@
 .items {
     background-color: navajowhite;
     border: 2px solid yellow;
-    align-self: flex-end;
+    min-width: 300px;
     min-height: 400px; /*TODO: Resize it to be good*/
 }
 
