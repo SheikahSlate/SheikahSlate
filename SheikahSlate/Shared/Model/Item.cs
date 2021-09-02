@@ -37,7 +37,7 @@ namespace SheikahSlate.Shared.Model
 
         public int CountableStep { get; init; }
 
-        public string HelpText { get; init; }
+        public string HelpText { get; init; } = "";
 
         public int Count
         {

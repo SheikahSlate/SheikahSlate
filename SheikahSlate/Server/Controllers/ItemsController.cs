@@ -15,6 +15,6 @@ namespace SheikahSlate.Server.Controllers
     public class ItemsController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Item> Get() => JsonSerializer.Deserialize<IEnumerable<Item>>(System.IO.File.ReadAllText("Items.json"));
+        public IEnumerable<Item> Get() => JsonSerializer.Deserialize<IEnumerable<Item>>(System.IO.File.ReadAllText("Items.json")) ?? Enumerable.Empty<Item>();
     }
 }

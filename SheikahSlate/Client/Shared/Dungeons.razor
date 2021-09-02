@@ -26,15 +26,15 @@ else
 </div>
 
 @code {
-    private IEnumerable<Dungeon> dungeons;
-    private IDictionary<int, IDictionary<int, int>> storedDungeonStates;
+    private IEnumerable<Dungeon> dungeons = Enumerable.Empty<Dungeon>();
+    private IDictionary<int, IDictionary<int, int>> storedDungeonStates = new Dictionary<int, IDictionary<int, int>>();
 
     protected override async Task OnInitializedAsync()
     {
-        Task<IEnumerable<Dungeon>> defaultDungeonsTask = Http.GetFromJsonAsync<IEnumerable<Dungeon>>("/Api/Dungeons");
+        Task<IEnumerable<Dungeon>?> defaultDungeonsTask = Http.GetFromJsonAsync<IEnumerable<Dungeon>>("/Api/Dungeons");
 
         storedDungeonStates = await LocalStorage.GetItemAsync<IDictionary<int, IDictionary<int, int>>>("Dungeons");
-        dungeons = await defaultDungeonsTask;
+        dungeons = await defaultDungeonsTask ?? dungeons;
         Console.WriteLine("Obtained dungeons, merging...");
         if (storedDungeonStates is null)
         {
@@ -43,19 +43,11 @@ else
         else
         {
             foreach (KeyValuePair<int, IDictionary<int, int>> storedDungeon in storedDungeonStates) {
-                Dungeon dungeon = dungeons.FirstOrDefault(d => d.Id == storedDungeon.Key);
-                if (dungeon is null) {
-                    continue;
-                }
-                else
-                {
+                Dungeon? dungeon = dungeons.FirstOrDefault(d => d.Id == storedDungeon.Key);
+                if (dungeon is not null) {
 					foreach (KeyValuePair<int, int> storedItem in storedDungeon.Value) {
-                        Item item = dungeon.Items.FirstOrDefault(i => i.Id == storedItem.Key);
-                        if (item is null) {
-                            continue;
-                        }
-                        else
-                        {
+                        Item? item = dungeon.Items.FirstOrDefault(i => i.Id == storedItem.Key);
+                        if (item is not null) {
 							item.CurrentState = storedItem.Value;
                         }
 					}

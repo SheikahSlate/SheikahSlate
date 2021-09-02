@@ -24,15 +24,15 @@ else
 </div>
 
 @code {
-    private IEnumerable<Item> items;
-    private IDictionary<int, int> storedItemStates;
+    private IEnumerable<Item> items = Enumerable.Empty<Item>();
+    private IDictionary<int, int> storedItemStates = new Dictionary<int, int>();
 
     protected override async Task OnInitializedAsync()
     {
-        Task<IEnumerable<Item>> defaultItemsTask = Http.GetFromJsonAsync<IEnumerable<Item>>("/Api/Items");
+        Task<IEnumerable<Item>?> defaultItemsTask = Http.GetFromJsonAsync<IEnumerable<Item>>("/Api/Items");
 
         storedItemStates = await LocalStorage.GetItemAsync<IDictionary<int, int>>("Items");
-        items = await defaultItemsTask;
+        items = await defaultItemsTask ?? items;
         Console.WriteLine("Obtained items, merging...");
         if (storedItemStates is null)
         {
@@ -41,7 +41,10 @@ else
         else
         {
             foreach (KeyValuePair<int, int> storedItem in storedItemStates) {
-                items.FirstOrDefault(item => item.Id == storedItem.Key).CurrentState = storedItem.Value;
+                Item? item = items.FirstOrDefault(item => item.Id == storedItem.Key);
+                if (item is not null) {
+                    item.CurrentState = storedItem.Value;
+				}
             }
         }
     }

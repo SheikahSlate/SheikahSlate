@@ -15,9 +15,6 @@ namespace SheikahSlate.Server.Controllers
     public class DungeonsController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Dungeon> Get() { 
-            List<Dungeon> dungeons = JsonSerializer.Deserialize<IEnumerable<Dungeon>>(System.IO.File.ReadAllText("Dungeons.json")).ToList();
-            return dungeons;
-        }
+        public IEnumerable<Dungeon> Get() => JsonSerializer.Deserialize<IEnumerable<Dungeon>>(System.IO.File.ReadAllText("Dungeons.json")) ?? Enumerable.Empty<Dungeon>();
     }
 }
