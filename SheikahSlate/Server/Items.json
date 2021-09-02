@@ -2,6 +2,8 @@
   {
     "Name": "Deku Sticks",
     "Id": 1,
+    "GridRow": 1,
+    "GridColumn": 1,
     "MaxState": 3,
     "CountableMin": 10,
     "CountableStep": 10
@@ -9,6 +11,8 @@
   {
     "Name": "Deku Nuts",
     "Id": 2,
+    "GridRow": 1,
+    "GridColumn": 2,
     "MaxState": 3,
     "CountableMin": 20,
     "CountableStep": 10
@@ -16,6 +20,8 @@
   {
     "Name": "Bombs",
     "Id": 3,
+    "GridRow": 1,
+    "GridColumn": 3,
     "MaxState": 3,
     "CountableMin": 20,
     "CountableStep": 10
@@ -24,32 +30,46 @@
     "Name": "Fairy Bow/Arrows",
     "Id": 4,
     "MaxState": 3,
+    "GridRow": 1,
+    "GridColumn": 4,
     "CountableMin": 30,
     "CountableStep": 10
   },
   {
     "Name": "Fire Arrows",
-    "Id": 5
+    "Id": 5,
+    "GridRow": 1,
+    "GridColumn": 5
   },
   {
     "Name": "Din's Fire",
-    "Id": 6
+    "Id": 6,
+    "GridRow": 1,
+    "GridColumn": 6
   },
   {
     "Name": "Kokiri Sword",
-    "Id": 7
+    "Id": 7,
+    "GridRow": 1,
+    "GridColumn": 7
   },
   {
     "Name": "Master Sword",
-    "Id": 8
+    "Id": 8,
+    "GridRow": 1,
+    "GridColumn": 8
   },
   {
     "Name": "Biggoron's Sword",
-    "Id": 9
+    "Id": 9,
+    "GridRow": 1,
+    "GridColumn": 9
   },
   {
     "Name": "Slingshot",
     "Id": 10,
+    "GridRow": 2,
+    "GridColumn": 1,
     "MaxState": 3,
     "CountableMin": 30,
     "CountableStep": 10
@@ -57,227 +77,325 @@
   {
     "Name": "Ocarina",
     "Id": 11,
+    "GridRow": 2,
+    "GridColumn": 2,
     "MaxState": 2
   },
   {
     "Name": "Bombchus",
+    "GridRow": 2,
+    "GridColumn": 3,
     "Id": 12
   },
   {
     "Name": "Hookshot/Longshot",
     "Id": 13,
+    "GridRow": 2,
+    "GridColumn": 4,
     "MaxState": 2
   },
   {
     "Name": "Ice Arrows",
-    "Id": 14
+    "Id": 14,
+    "GridRow": 2,
+    "GridColumn": 5
   },
   {
     "Name": "Farore's Wind",
-    "Id": 15
+    "Id": 15,
+    "GridRow": 2,
+    "GridColumn": 6
   },
   {
     "Name": "Deku Shield",
-    "Id": 16
+    "Id": 16,
+    "GridRow": 2,
+    "GridColumn": 7
   },
   {
     "Name": "Hylian Shield",
-    "Id": 17
+    "Id": 17,
+    "GridRow": 2,
+    "GridColumn": 8
   },
   {
     "Name": "Mirror Shield",
-    "Id": 18
+    "Id": 18,
+    "GridRow": 2,
+    "GridColumn": 9
   },
   {
     "Name": "Boomerang",
-    "Id": 19
+    "Id": 19,
+    "GridRow": 3,
+    "GridColumn": 1
   },
   {
     "Name": "Lens of Truth",
-    "Id": 20
+    "Id": 20,
+    "GridRow": 3,
+    "GridColumn": 2
   },
   {
     "Name": "Magic Beans",
     "Id": 21,
+    "GridRow": 3,
+    "GridColumn": 3,
     "MaxState": 10,
     "CountableStep": 1
   },
   {
     "Name": "Giant's Hammer",
-    "Id": 22
+    "Id": 22,
+    "GridRow": 3,
+    "GridColumn": 4
   },
   {
     "Name": "Light Arrows",
-    "Id": 23
+    "Id": 23,
+    "GridRow": 3,
+    "GridColumn": 5
   },
   {
     "Name": "Nayru's Love",
-    "Id": 24
+    "Id": 24,
+    "GridRow": 3,
+    "GridColumn": 6
   },
   {
     "Name": "Kokiri Tunic",
     "Id": 25,
+    "GridRow": 3,
+    "GridColumn": 7,
     "MaxState": 0
   },
   {
     "Name": "Goron Tunic",
-    "Id": 26
+    "Id": 26,
+    "GridRow": 3,
+    "GridColumn": 8
   },
   {
     "Name": "Zora's Tunic",
-    "Id": 27
+    "Id": 27,
+    "GridRow": 3,
+    "GridColumn": 9
   },
   {
     "Name": "Wallet",
     "Id": 28,
+    "GridRow": 4,
+    "GridColumn": 1,
     "MaxState": 3
   },
   {
     "Name": "Skulltula Tokens",
     "Id": 29,
+    "GridRow": 4,
+    "GridColumn": 2,
     "MaxState": 100,
     "CountableStep": 1
   },
   {
     "Name": "Bottle",
     "Id": 30,
+    "GridRow": 4,
+    "GridColumn": 3,
     "MaxState": 4,
     "CountableStep": 1
   },
   {
     "Name": "Ruto's Letter",
-    "Id": 31
+    "Id": 31,
+    "GridRow": 4,
+    "GridColumn": 4
   },
   {
     "Name": "Child Trade Sequence",
     "Id": 32,
+    "GridRow": 4,
+    "GridColumn": 5,
     "MaxState": 8
   },
   {
     "Name": "Adult Trade Sequence",
     "Id": 33,
+    "GridRow": 4,
+    "GridColumn": 6,
     "MaxState": 11
   },
   {
     "Name": "Kokiri Boots",
     "Id": 34,
+    "GridRow": 4,
+    "GridColumn": 7,
     "MaxState": 0
   },
   {
     "Name": "Iron Boots",
-    "Id": 35
+    "Id": 35,
+    "GridRow": 4,
+    "GridColumn": 8
   },
   {
     "Name": "Hover Boots",
-    "Id": 36
+    "Id": 36,
+    "GridRow": 4,
+    "GridColumn": 9
   },
   {
     "Name": "Zora's Scale",
     "Id": 37,
+    "GridRow": 5,
+    "GridColumn": 1,
     "MaxState": 2
   },
   {
     "Name": "Magic",
     "Id": 38,
+    "GridRow": 5,
+    "GridColumn": 2,
     "MaxState": 2
   },
   {
     "Name": "Strength Upgrade",
     "Id": 39,
+    "GridRow": 5,
+    "GridColumn": 3,
     "MaxState": 3
   },
   {
     "Name": "Gerudo Membership Card",
-    "Id": 40
+    "Id": 40,
+    "GridRow": 5,
+    "GridColumn": 4
   },
   {
     "Name": "Stone of Agony",
-    "Id": 41
+    "Id": 41,
+    "GridRow": 5,
+    "GridColumn": 5
   },
   {
     "Name": "Heart Piece",
     "Id": 42,
+    "GridRow": 5,
+    "GridColumn": 6,
     "MaxState": 36,
     "CountableStep": 1
   },
   {
     "Name": "Heart Container",
     "Id": 43,
+    "GridRow": 5,
+    "GridColumn": 7,
     "MaxState": 8,
     "CountableStep": 1
   },
   {
     "Name": "Double Defense",
-    "Id": 44
+    "Id": 44,
+    "GridRow": 5,
+    "GridColumn": 8
   },
   {
     "Name": "FOOL",
     "Id": 45,
+    "GridRow": 5,
+    "GridColumn": 9,
     "MaxState": 999,
     "CountableStep": 1
   },
   {
     "Name": "Zelda's Lullaby",
-    "Id": 46
+    "Id": 46,
+    "GridRow": 6,
+    "GridColumn": 1
   },
   {
     "Name": "Epona's Song",
-    "Id": 47
+    "Id": 47,
+    "GridRow": 6,
+    "GridColumn": 2
   },
   {
     "Name": "Saria's Song",
-    "Id": 48
+    "Id": 48,
+    "GridRow": 6,
+    "GridColumn": 3
   },
   {
     "Name": "Sun's Song",
-    "Id": 49
+    "Id": 49,
+    "GridRow": 6,
+    "GridColumn": 4
   },
   {
     "Name": "Song of Time",
-    "Id": 50
+    "Id": 50,
+    "GridRow": 6,
+    "GridColumn": 5
   },
   {
     "Name": "Song of Storms",
-    "Id": 51
+    "Id": 51,
+    "GridRow": 6,
+    "GridColumn": 6
   },
   {
     "Name": "Scarecrow's Song",
-    "Id": 52
+    "Id": 52,
+    "GridRow": 6,
+    "GridColumn": 7
   },
   {
     "Name": "Triforce Piece",
     "Id": 53,
+    "GridRow": 6,
+    "GridColumn": 9,
     "MaxState": 999,
     "CountableStep": 1
   },
   {
     "Name": "Minuet of Forest",
     "Id": 54,
+    "GridRow": 7,
+    "GridColumn": 1,
     "HelpText": "FST"
   },
   {
     "Name": "Bolero of Fire",
     "Id": 55,
+    "GridRow": 7,
+    "GridColumn": 2,
     "HelpText": "FIR"
   },
   {
     "Name": "Serenade of Water",
     "Id": 56,
+    "GridRow": 7,
+    "GridColumn": 3,
     "HelpText": "WTR"
   },
   {
     "Name": "Requiem of Spirit",
     "Id": 57,
+    "GridRow": 7,
+    "GridColumn": 4,
     "HelpText": "SPR"
   },
   {
     "Name": "Nocturne of Shadow",
     "Id": 58,
+    "GridRow": 7,
+    "GridColumn": 5,
     "HelpText": "SHD"
   },
   {
     "Name": "Prelude of Light",
     "Id": 59,
+    "GridRow": 7,
+    "GridColumn": 6,
     "HelpText": "LGT"
   }
 ]

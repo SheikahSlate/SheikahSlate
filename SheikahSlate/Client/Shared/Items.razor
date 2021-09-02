@@ -2,36 +2,46 @@
 @inject ILocalStorageService LocalStorage
 
 <div class="items">
-@if (items is null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    @foreach (Item item in items)
-    {
-        <div class = "grid @(String.Format("grid{0}", item.Id))">
-            <img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
-            @if (item.Countable)
-            {
-                <div class = "item-label @(item.CurrentState == item.MaxState ? "item-maximized" : "")">
-                    @item.Count
-                </div>
-            }
-            @if (item.HelpText is not null)
-            {
-                <div class = "item-label">
-                    @item.HelpText
-                </div>
-            }
-        </div>
-    }
-}
+	@if (items is null)
+	{
+		<p><em>Loading...</em></p>
+	}
+	else
+	{
+		<table class="item-table">
+		@foreach (IGrouping<int, Item> row in items.OrderBy(item => item.GridColumn).GroupBy(item => item.GridRow).OrderBy(row => row.Key))
+			{
+				<tr>
+					@foreach (Item item in row) {
+						<td>
+							<div class = "grid-item">
+								<img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
+								@if (item.Countable)
+								{
+									<div class = "item-label @(item.CurrentState == item.MaxState ? "item-maximized" : "")">
+										@item.Count
+									</div>
+								}
+								@if (item.HelpText is not null)
+								{
+									<div class = "item-label">
+										@item.HelpText
+									</div>
+								}
+							</div>
+						</td>
+					}
+				</tr>
+			}
+		</table>
+	}
 </div>
 
 @code {
     private IEnumerable<Item> items = Enumerable.Empty<Item>();
     private IDictionary<int, int> storedItemStates = new Dictionary<int, int>();
+
+    private string GridLine(int start, int end) => String.Join(" ", Enumerable.Range(start, end - start).Select(i => String.Concat("grid", i)));
 
     protected override async Task OnInitializedAsync()
     {
