@@ -2,44 +2,67 @@
 @inject ILocalStorageService LocalStorage
 
 <div class="items">
-	@if (items is null)
+	@if (ItemList is null)
 	{
 		<p><em>Loading...</em></p>
 	}
 	else
 	{
 		<table class="item-table">
-		@foreach (IGrouping<int, Item> row in items.OrderBy(item => item.GridColumn).GroupBy(item => item.GridRow).OrderBy(row => row.Key))
+		@foreach (IGrouping<int, Item> row in ItemList.OrderBy(item => item.GridColumn).GroupBy(item => item.GridRow).OrderBy(row => row.Key))
+		{
+			@if (Row > row.Key)
 			{
-				<tr>
-					@foreach (Item item in row) {
-						<td>
-							<div class = "grid-item">
-								<img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
-								@if (item.Countable)
-								{
-									<div class = "item-label @(item.CurrentState == item.MaxState ? "item-maximized" : "")">
-										@item.Count
-									</div>
-								}
-								@if (item.HelpText is not null)
-								{
-									<div class = "item-label">
-										@item.HelpText
-									</div>
-								}
-							</div>
-						</td>
-					}
-				</tr>
+				Row = 1;
 			}
+			@while (Row + 1 <= row.Key)
+			{
+				Row++;
+				<tr></tr>
+			}
+			<tr>
+				@foreach (Item item in row)
+				{
+					@if (Column > item.GridColumn)
+					{
+						Column = 1;
+					}
+					@while (Column + 1 <= item.GridColumn)
+					{
+						Column++;
+						<td></td>
+					}
+					<td>
+						<div class = "grid-item">
+							<img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
+							@if (item.Countable)
+							{
+								<div class = "item-label @(item.CurrentState == item.MaxState ? "item-maximized" : "")">
+									@item.Count
+								</div>
+							}
+							@if (item.HelpText is not null)
+							{
+								<div class = "item-label">
+									@item.HelpText
+								</div>
+							}
+						</div>
+					</td>
+					Column++;
+				}
+			</tr>
+			Row++;
+		}
 		</table>
 	}
 </div>
 
 @code {
-    private IEnumerable<Item> items = Enumerable.Empty<Item>();
-    private IDictionary<int, int> storedItemStates = new Dictionary<int, int>();
+	private IEnumerable<Item> ItemList = Enumerable.Empty<Item>();
+    private IDictionary<int, int> StoredItemStates = new Dictionary<int, int>();
+	private int Row = 1;
+	private int Column = 1;
 
     private string GridLine(int start, int end) => String.Join(" ", Enumerable.Range(start, end - start).Select(i => String.Concat("grid", i)));
 
@@ -47,17 +70,17 @@
     {
         Task<IEnumerable<Item>?> defaultItemsTask = Http.GetFromJsonAsync<IEnumerable<Item>>("/Api/Items");
 
-        storedItemStates = await LocalStorage.GetItemAsync<IDictionary<int, int>>("Items");
-        items = await defaultItemsTask ?? items;
+        StoredItemStates = await LocalStorage.GetItemAsync<IDictionary<int, int>>("Items");
+        ItemList = await defaultItemsTask ?? ItemList;
         Console.WriteLine("Obtained items, merging...");
-        if (storedItemStates is null)
+        if (StoredItemStates is null)
         {
-            storedItemStates = new Dictionary<int, int>();
+            StoredItemStates = new Dictionary<int, int>();
         }
         else
         {
-            foreach (KeyValuePair<int, int> storedItem in storedItemStates) {
-                Item? item = items.FirstOrDefault(item => item.Id == storedItem.Key);
+            foreach (KeyValuePair<int, int> storedItem in StoredItemStates) {
+                Item? item = ItemList.FirstOrDefault(item => item.Id == storedItem.Key);
                 if (item is not null) {
                     item.CurrentState = storedItem.Value;
 				}
@@ -76,7 +99,7 @@
                 break;
             }
         }
-		storedItemStates[item.Id] = item.CurrentState;
-		await LocalStorage.SetItemAsync("Items", storedItemStates);
+		StoredItemStates[item.Id] = item.CurrentState;
+		await LocalStorage.SetItemAsync("Items", StoredItemStates);
     }
 }
