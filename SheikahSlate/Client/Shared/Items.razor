@@ -10,15 +10,21 @@ else
 {
     @foreach (Item item in items)
     {
-        <img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
-        @if (item.Countable)
-        {
-            @item.Count
-        }
-        @if (item.HelpText is not null)
-        {
-            @item.HelpText
-        }
+        <div class = "grid @(String.Format("grid{0}", item.Id))">
+            <img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
+            @if (item.Countable)
+            {
+                <div class = "item-label @(item.CurrentState == item.MaxState ? "item-maximized" : "")">
+                    @item.Count
+                </div>
+            }
+            @if (item.HelpText is not null)
+            {
+                <div class = "item-label">
+                    @item.HelpText
+                </div>
+            }
+        </div>
     }
 }
 </div>
