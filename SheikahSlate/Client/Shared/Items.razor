@@ -33,8 +33,8 @@
 						<td></td>
 					}
 					<td>
-						<div class = "grid-item">
-							<img src="Images/Items/@item.ImageFileName" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" width="32px" title="@item.Name"/>
+						<div class = "grid-item" @onmouseup="@(async e => await clickHandlerAsync(e, item))" oncontextmenu="return false;" title="@item.Name">
+							<img src="Images/Items/@item.ImageFileName"/>
 							@if (item.Countable)
 							{
 								<div class = "item-label @(item.CurrentState == item.MaxState ? "item-maximized" : "")">
